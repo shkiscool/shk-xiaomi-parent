@@ -1,0 +1,26 @@
+server:
+  port: 8763
+  context-path: /message
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      ##mq的连接信息地址
+spring:
+  application:
+    name: message
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+  mail:
+    host: smtp.163.com
+    username: shkiscool@163.com
+    password: 123abc
+    enable:  true
+    smtp:
+      auth: true
+    starttls:
+      enable: true
+      required: true
